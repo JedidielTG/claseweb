@@ -6,13 +6,16 @@ formulario:
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+
 
 <head>
   <title>Title</title>
+
   <!-- Required meta tags -->
-  <meta charset="utf-8" />
+  <meta charset="utf-8"  />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  
 
   <!-- Bootstrap CSS v5.2.1 -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -20,31 +23,39 @@ formulario:
 </head>
 
 <body>
-  <header>
-    <!-- place navbar here -->
-  </header>
+  <style>
+    body {
+      background-color: darkcyan;
+    }
+  </style>
+  <section>
+  <h1 class="text-light mb-0 p-1 fs-2 w-100 justify-content-center d-flex fw-bold" > Formulario de Contacto </h1>
+  <p class="text-light mb-0 p-6 fs-5 w-100 justify-content-center d-flex"> Alumno: Jedidiel Toto Garcia.          Asignatura: Desarrollo Web.         Docente: Luis Fernando Villafaña. </P>
+  <p class="text-light mb-0 p-6 fs-5 w-100 justify-content-center d-flex"> Universidad del sur campus online.  5° Cuatrimeste</P>
+    <!-- place navbar here --> 
+  </section>
   <main>
-    <div class="container h-100" style="padding-top: 4rem;">
+    <div class="container h-100" style="padding-top: 3rem;">
       <div class="row justify-content-center align-item-center h-100">
         <div class="cal-12 col-sm-12 col-md-3 mb-3">
           <div class="card">
             <div class="card-body">
               <form action="./function/insert.php" method="post">
                 <div class="mb-3">
-                  <label class="form-label">Nombre completo</label>
+                  <label class="form-label fw-bold">Nombre completo</label>
                   <input name="nombre" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">Correo electrónico</label>
+                  <label class="form-label fw-bold">Correo electrónico</label>
                   <input name="email" type="email" class="form-control">
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">Asunto</label>
+                  <label class="form-label fw-bold">Asunto</label>
                   <input name="telefono" type="text" class="form-control">
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">Mensajes</label>
-                  <input name="Mensajes" type="text" class="form-control">
+                  <label class="form-label fw-bold">Mensajes</label>
+                  <textarea name="Mensajes" type="text" class="form-control" row="3" ></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
               </form>
