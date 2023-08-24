@@ -39,12 +39,8 @@ formulario:
                   <input name="email" type="email" class="form-control">
                 </div>
                 <div class="mb-3">
-                  <label class="form-label">Asunto</label>
-                  <input name="telefono" type="text" class="form-control">
-                </div>
-                <div class="mb-3">
-                  <label class="form-label">Mensajes</label>
-                  <input name="Mensajes" type="text" class="form-control">
+                  <label class="form-label">Teléfono</label>
+                  <input name="telefono" type="number" class="form-control">
                 </div>
                 <button type="submit" class="btn btn-primary">Enviar</button>
               </form>
@@ -61,28 +57,33 @@ formulario:
                     <th scope="col">#</th>
                     <th scope="col">Nombres</th>
                     <th scope="col">Email</th>
-                    <th scope="col">Asunto</th>
-                    <th scope="col">Mensajes</th>
+                    <th scope="col">Teléfono</th>
+                    <th scope="col">Editar</th>
                     <th scope="col">Eliminar</th>
                   </tr>
                 </thead>
                 <tbody>
                   <?php
-                      require("./connection/connection.php");
-                      $query = "SELECT * FROM usuario";
-                        $ejecutar = mysqli_query($connection, $query);
-                        $contador = 1;
-                        while($fila = mysqli_fetch_array($ejecutar)){
-                        ?>
-                        <tr>
-                        <td><?php echo $contador;?></td>
-                        <td><?php echo $fila['nombre'];?></td>
-                        <td><?php echo $fila['email'];?></td>
-                        <td><?php echo $fila['tel'];?></td>
-                        <td><?php echo $fila['Mensajes'];?></td>
-                        <td><a href="./function/delete.php?id=<?php echo $fila['id_usuario'];?>">eliminar</a></td>
-                        </tr>
-                        <?php $contador++;} ?>
+                  require("./connection/connection.php");
+
+                  $query = "SELECT * FROM usuario";
+
+                  $ejecutar = mysqli_query($connection, $query);
+
+                  $contador = 1;
+
+                  while($fila = mysqli_fetch_array($ejecutar)){
+
+                  ?>
+                  <tr>
+                    <td><?php echo $contador;?></td>
+                    <td><?php echo $fila['nombre'];?></td>
+                    <td><?php echo $fila['email'];?></td>
+                    <td><?php echo $fila['tel'];?></td>
+                    <td><a href="./function/update.php">editar</a></td>
+                    <td><a href="./function/delete.php?id=<?php echo $fila['id_usuario'];?>">eliminar</a></td>
+                  </tr>
+                  <?php $contador++;} ?>
                 </tbody>
               </table>
               </div>

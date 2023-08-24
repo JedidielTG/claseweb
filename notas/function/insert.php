@@ -7,9 +7,8 @@ require('../connection/connection.php');
 $nombre = $_POST ['nombre'];
 $email = $_POST ['email'];
 $telefono = $_POST ['telefono'];
-$Mensajes = $_POST ['Mensajes'];
 
-$query = "INSERT INTO usuario (nombre,email,tel,Mensajes) VALUES ('$nombre','$email','$telefono','$Mensajes')";
+$query = "INSERT INTO usuario (nombre,email,tel) VALUES ('$nombre','$email','$telefono')";
 
 $ejecutar = mysqli_query($connection, $query);
 
