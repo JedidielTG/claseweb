@@ -3,7 +3,7 @@
 $hostname = "localhost"; // 127.0.0.1
 $username = "root";
 $password = "";
-$database = "pagina";
+$database = "notas";
 
 $connection = mysqli_connect($hostname, $username, $password, $database);
 
