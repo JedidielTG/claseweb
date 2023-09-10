@@ -6,12 +6,6 @@ CREATE TABLE cliente (
     password VARCHAR(255)
 );
 
--- Tabla Area
-CREATE TABLE area (
-    id_area INT PRIMARY KEY AUTO_INCREMENT,
-    nombre_area VARCHAR(255)
-);
-
 -- Tabla Administrador
 CREATE TABLE administrador (
     id_administrador INT PRIMARY KEY AUTO_INCREMENT,
@@ -22,6 +16,11 @@ CREATE TABLE administrador (
     FOREIGN KEY (id_area) REFERENCES area(id_area)
 );
 
+-- Tabla Area
+CREATE TABLE area (
+    id_area INT PRIMARY KEY AUTO_INCREMENT,
+    nombre_area VARCHAR(255)
+);
 
 -- Tabla Nivel
 CREATE TABLE nivel (

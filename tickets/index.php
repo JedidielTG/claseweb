@@ -14,33 +14,38 @@
 </head>
 
 <body>
+<style>
+    body {
+      background-color: darkcyan;
+    }
+</style>
     <header>
         <!-- place navbar here -->
         <?php include 'includes/header.php'; ?>
     </header>
     <main>
-        <div class="container mt-5">
+        <div class="container h-100" style="padding-top: 15rem;">
             <div class="row justify-content-center align-items-center g-2">
                 <div class="col">
-                    <h2>Sistema de Tickets para la Gestión de Incidencias</h2>
-                    <p>Nuestra plataforma proporciona una solución eficaz para gestionar incidencias y problemas de
+                    <h2 class= "text-light">Sistema de Tickets para la Gestión de Incidencias</h2>
+                    <p class= "text-light">Nuestra plataforma proporciona una solución eficaz para gestionar incidencias y problemas de
                         manera organizada.</p>
                 </div>
                 <div class="col">
-                    <div class="card">
-                        <div class="card-body">
+                    <div class="card  bg-secondary text-light">
+                      <div class="card-body">
                         <form action="./auth/login.php" method="post">
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" name="email" placeholder="email">
-                                <label>Email</label>
+                              <input type="text" class="form-control order-color-success bg-dark text-light" name="email" placeholder="email">
+                              <label class= "text-light" >Email</label>
                             </div>
                             <div class="form-floating mb-3">
-                                <input type="text" class="form-control" name="email" placeholder="password">
-                                <label>Password</label>
+                              <input type="text" class="form-control order-color-success bg-dark text-light" name="email" placeholder="password">
+                              <label class= "text-light">Password</label>
                             </div>
                             <button type="submit" class="btn btn-primary">Iniciar sesión</button>
                         </form>
-                        </div>
+                      </div>
                     </div>
                 </div>
             </div>
@@ -49,8 +54,8 @@
     <footer>
         <!-- place footer here 
     <?php // include 'includes/footer.php'; ?>
-    </footer>
-    <!-- Bootstrap JavaScript Libraries -->
+  </footer>
+  <!-- Bootstrap JavaScript Libraries -->
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
             integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
             </script>
